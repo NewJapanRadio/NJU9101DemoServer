@@ -1,0 +1,10 @@
+{
+  "name": "NJU9101Demo",
+  "env": {
+    "NPM_CONFIG_PRODUCTION": "false",
+    "MQTT_HOST": "",
+    "MQTT_PORT": "",
+    "MQTT_USERNAME": "",
+    "MQTT_PASSWORD": ""
+  }
+}
