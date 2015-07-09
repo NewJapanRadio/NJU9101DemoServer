@@ -12,7 +12,7 @@ var _Content = React.createClass({
     return(
       <div>
         <Jumbotron title="NJU9101" text='Low Power Analog Front End IC' />
-        <Panel title="Gas Sensor Demo deploy test" id="panel" />
+        <Panel title="Gas Sensor Demo" id="panel" />
       </div>
     );
   },
