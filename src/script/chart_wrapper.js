@@ -41,8 +41,8 @@ var chart1Options = {
       title: 'Temperature [degC]',
       titleTextStyle: { italic: false },
       slantedText: false,
-      maxValue: 50,
-      minValue: -30,
+      maxValue: 40,
+      minValue: -10,
     }
   },
   explorer: { actions: ['dragToZoom', 'rightClickToReset'], maxZoomIn:0.01 },
