@@ -1,15 +1,23 @@
 $fontFamily : 'Jrclogo';
 $fontPath : '../font/Jrclogo.ttf';
-$jumboPadLeft : 30px;
+$jumboPadLeft : 2em;
 
 @mixin centerHorizontal {
-  margin-left : auto;
-  margin-right : auto;
+  margin : 0 auto;
 }
 
 @font-face {
   font-family : $fontFamily;
   src : url($fontPath) format('truetype');
+}
+
+.slide {
+  @include centerHorizontal;
+  width : 90%;
+}
+
+.slide-item {
+  @include centerHorizontal;
 }
 
 logo {
@@ -22,7 +30,7 @@ logo {
 
 .jumbotron {
   padding-top : $jumboPadLeft;
-  padding-bottom : 10px;
+  padding-bottom : 1em;
 }
 
 .jumbotron h1 {
@@ -39,13 +47,25 @@ logo {
   margin-bottom : 0;
 }
 
+.page-header h1 {
+  padding-left : 1em;
+  margin-top : 5em;
+  margin-bottom : 0;
+  font-family: Consolas, "News Cycle", "Arial Narrow Bold", sans-serif;
+}
+
 #button {
   @include centerHorizontal;
-  min-width : 100px;
-  max-width : 100px;
+  min-width : 5em;
+  max-width : 5em;
 }
 
 #panel {
+  @include centerHorizontal;
+  width : 90%;
+}
+
+.chart {
   @include centerHorizontal;
   width : 96%;
 }
@@ -53,6 +73,6 @@ logo {
 #switch {
   @include centerHorizontal;
   width : 25%;
-  height : 30px;
+  height : 2em;
 }
 
