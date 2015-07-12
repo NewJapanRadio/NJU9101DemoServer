@@ -85,6 +85,15 @@ var _Panel = React.createClass({
 });
 
 var _Slider = React.createClass({
+  handleResize: function(e) {
+    this.setState({windowWidth: window.innerWidth});
+  },
+  componentDidMount: function() {
+    window.addEventListener('resize', this.handleResize);
+  },
+  componentWillUnmount: function() {
+    window.removeEventListener('resize', this.handleResize);
+  },
   render: function () {
     var settings = {
       autoplay: true,
@@ -102,34 +111,34 @@ var _Slider = React.createClass({
     return (
       <Slider {...settings}>
         <div className="slide-item">
-            <center>
-                <img className="img-responsive" src="./assets/about_demo1.png"/>
-                <div className="alert alert-success" role="alert">Control NJU9101 via I<sup>2</sup>C</div>
-            </center>
+          <center>
+            <img className="img-responsive" src="./assets/about_demo1.png"/>
+            <div className="alert alert-success" role="alert">Control NJU9101 via I<sup>2</sup>C</div>
+          </center>
         </div>
         <div className="slide-item">
-            <center>
-                <img className="img-responsive" src="./assets/about_demo2.png"/>
-                <div className="alert alert-success" role="alert">Connect to <i className="fa fa-android"/><i className="fa fa-mobile"/> via Bluetooth Low Energy</div>
-            </center>
+          <center>
+            <img className="img-responsive" src="./assets/about_demo2.png"/>
+            <div className="alert alert-success" role="alert">Connect to <i className="fa fa-android"/><i className="fa fa-mobile"/> via Bluetooth Low Energy</div>
+          </center>
         </div>
         <div className="slide-item">
-            <center>
-                <img className="img-responsive" src="./assets/about_demo3.png"/>
-                <div className="alert alert-success" role="alert">Publish sensor data read from NJU9101 to MQTT Broker using MQTT protocol</div>
-            </center>
+          <center>
+            <img className="img-responsive" src="./assets/about_demo3.png"/>
+            <div className="alert alert-success" role="alert">Publish sensor data read from NJU9101 to MQTT Broker using MQTT protocol</div>
+          </center>
         </div>
         <div className="slide-item">
-            <center>
-                <img className="img-responsive" src="./assets/about_demo4.png"/>
-                <div className="alert alert-success" role="alert">Subscribe the sensor data by web application on Heroku</div>
-            </center>
+          <center>
+            <img className="img-responsive" src="./assets/about_demo4.png"/>
+            <div className="alert alert-success" role="alert">Subscribe the sensor data by web application on Heroku</div>
+          </center>
         </div>
         <div className="slide-item">
-            <center>
-                <img className="img-responsive" src="./assets/about_demo5.png"/>
-                <div className="alert alert-success" role="alert">Browse the visualized sensor data</div>
-            </center>
+          <center>
+            <img className="img-responsive" src="./assets/about_demo5.png"/>
+            <div className="alert alert-success" role="alert">Browse the visualized sensor data</div>
+          </center>
         </div>
       </Slider>
     );
