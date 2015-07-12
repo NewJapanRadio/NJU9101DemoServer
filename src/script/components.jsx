@@ -85,6 +85,15 @@ var _Panel = React.createClass({
 });
 
 var _Slider = React.createClass({
+    handleResize: function(e) {
+      this.setState({windowWidth: window.innerWidth});
+  },
+    componentDidMount: function() {
+    window.addEventListener('resize', this.handleResize);
+  },
+    componentWillUnmount: function() {
+    window.removeEventListener('resize', this.handleResize);
+  },
   render: function () {
     var settings = {
       autoplay: true,
