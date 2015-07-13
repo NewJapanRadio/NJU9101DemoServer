@@ -103,7 +103,7 @@ var _Slider = React.createClass({
       draggable: false,
       fade: true,
       infinite: true,
-      lazyLoad: true,
+      lazyLoad: false,
       slidesToScroll: 1,
       slidesToShow: 1,
       speed: 1000
