@@ -15,7 +15,7 @@ var _Content = React.createClass({
         <Jumbotron title="NJU9101" text='Low Power Analog Front End IC' />
         <Panel title="Gas Sensor Demo" id="panel" />
         <div className="page-header">
-          <h1>About this Demonstration</h1>
+          <h1>Overview of this demo</h1>
         </div>
         <Slider />
       </div>
