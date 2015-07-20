@@ -1,0 +1,8 @@
+applications:
+- disk_quota: 1024M
+  host: nju9101demo
+  name: nju9101demo
+  path: .
+  domain: mybluemix.net
+  instances: 1
+  memory: 256M
