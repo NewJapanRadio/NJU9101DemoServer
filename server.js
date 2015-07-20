@@ -16,7 +16,9 @@ function startServer(init){
 
   var bufferSize = process.env.DATA_BUFFER_SIZE;
   var dataBuffer = init;
-  dataBuffer = dataBuffer.slice(dataBuffer.length - bufferSize);
+  if (dataBuffer.length > bufferSize){
+      dataBuffer = dataBuffer.slice(dataBuffer.length - bufferSize);
+  }
 
   var wss = new wsServer({server: server});
   wss.on('connection', function(ws){
@@ -26,7 +28,9 @@ function startServer(init){
   var _subscriber = new subscriber();
   _subscriber.on('message', function(data){
     dataBuffer.push(data);
-    dataBuffer = dataBuffer.slice(dataBuffer.length - bufferSize);
+    if (dataBuffer.length > bufferSize){
+        dataBuffer = dataBuffer.slice(dataBuffer.length - bufferSize);
+    }
     wss.clients.forEach(function(c){
       c.send(JSON.stringify(dataBuffer));
     });
